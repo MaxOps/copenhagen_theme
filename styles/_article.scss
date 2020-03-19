@@ -1,15 +1,16 @@
 /***** Article *****/
 .article {
+
   /*
   * The article grid is defined this way to optimize readability:
   * Sidebar | Content | Free space
   * 17%     | 66%     | 17%
   */
   @include desktop {
-    flex: 1 0 60%;
-    max-width: 60%;
+    flex: 1 0 65%;
+    max-width: 65%;
     min-width: 640px;
-    padding: 0 30px 0 120px;
+    padding: 0 30px 0 100px;
   }
 
   flex: 1 0 auto; //Explicit values needed whith flex-direction: column for IE11
@@ -48,7 +49,8 @@
 
   &-title {
     @include tablet {
-      flex-basis: 100%; /* Take entire row */
+      flex-basis: 100%;
+      /* Take entire row */
     }
 
     .icon-lock {
@@ -59,8 +61,12 @@
   }
 
   [role="button"] {
-    @include tablet { width: auto; }
-    flex-shrink: 0; /*Avoid collapsing elements in Safari (https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored)*/
+    @include tablet {
+      width: auto;
+    }
+
+    flex-shrink: 0;
+    /*Avoid collapsing elements in Safari (https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored)*/
     width: 100%;
   }
 
@@ -75,7 +81,10 @@
 
   &-body {
     @include content-body;
-    > p:last-child { margin-bottom: 0; }
+
+    >p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &-content {
@@ -131,15 +140,19 @@
     flex-direction: column;
     padding: 20px 0;
 
-    > * {
+    >* {
       flex: 1 0 50%; //Explicit values needed whith flex-direction: column for IE11
       min-width: 50%;
       overflow-wrap: break-word;
       margin-right: 0;
 
-      &:last-child { padding: 0; }
+      &:last-child {
+        padding: 0;
+      }
 
-      @include tablet { padding-right: 20px; }
+      @include tablet {
+        padding-right: 20px;
+      }
     }
   }
 
@@ -162,7 +175,9 @@
   }
 
   &-return-to-top {
-    @include desktop { display: none; }
+    @include desktop {
+      display: none;
+    }
 
     border-top: 1px solid $border-color;
 
@@ -184,6 +199,7 @@
 
   &-subscribe button {
     @extend .button;
+
     &[data-selected="true"] {
       @extend .button-primary;
     }
@@ -216,11 +232,22 @@
 
 .recent-articles,
 .related-articles {
+
+
   &-title {
+
     @extend .comment-heading
   }
+
+
 
   li {
     margin-bottom: 15px;
   }
+}
+
+.comment-heading {
+  font-weight: 400 !important;
+  margin-bottom: 25px !important;
+  color: #555759 !important;
 }
