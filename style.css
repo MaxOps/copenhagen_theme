@@ -1056,10 +1056,6 @@ ul {
   margin: 0 0 30px;
   max-width: 100%;
   text-align: center;
-  font-family: $heading_font;
-  font-weight:800;
-  text-transform: uppercase;
-  
 }
 
 @media (min-width: 768px) {
@@ -1115,8 +1111,7 @@ ul {
 
 .blocks-item-title {
   margin-bottom: 0;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 16px;
 }
 
 .blocks-item-description {
@@ -1141,7 +1136,6 @@ ul {
 
 .home-section h2 {
   margin-bottom: 10px;
-  text-align: center;
 }
 
 /***** Promoted articles *****/
@@ -1445,10 +1439,10 @@ ul {
 
 @media (min-width: 1024px) {
   .article {
-    flex: 1 0 66%;
-    max-width: 66%;
+    flex: 1 0 60%;
+    max-width: 60%;
     min-width: 640px;
-    padding: 0 30px;
+    padding: 0 30px 0 120px;
   }
 }
 
